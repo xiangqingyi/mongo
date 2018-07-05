@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户编辑页面</title>
+    <link rel="icon" href="/images/icon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/libs/mdui/css/mdui.css">
+    <script src="/javascripts/jquery-2.1.1.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    function add() {
+       const username = $('#username').val()
+       const email = $('#email').val()
+       const phone = $('#phone').val()
+    //    console.log(username)
+
+    //    if(username == "") {
+    //        alert("用户名不能为空")
+    //        loca.href = "/users/add"
+    //    }else if(email == "") {
+    //        alert("邮箱不能为空")
+    //        location.href = "/users/add"
+    //    }else if(phone == "") {
+    //        alert("电话不能为空")
+    //        location.href = "/users/add"
+    //    }else {
+    //        alert("添加成功")
+    //        location.href = '/users/list'
+    //    }
+       if(username == "" || email == "" || phone == "") {
+           alert("用户名、邮箱、电话不能为空")
+        //    location.href = "/users/add"
+       }else {
+           alert("添加成功")
+        //    location.href = "/users/list"
+       }
+    }
+    </script>
+</head>
+<body class="mdui-theme-primary-teal mdui-theme-accent-blue">
+    <div class="mdui-appbar">
+        <div class="mdui-toolbar mdui-color-theme">
+            <p class="mdui-typo-title">用户添加</p>
+        </div>
+    </div>
+    <div class="mdui-container mdui-m-t-3">
+        <form action="/users/add" method="post">
+            <div class="mdui-textfield">
+                <label class="mdui-textfield-label">username</label>
+                <input class="mdui-textfield-input" type="text" name="username" value="" id="username"/>
+            </div>
+            <div class="mdui-textfield">
+                <label class="mdui-textfield-label">email</label>
+                <input class="mdui-textfield-input" type="email" name="email" value="" id="email"/>
+            </div>
+            <div class="mdui-textfield">
+                <label class="mdui-textfield-label">phone</label>
+                <input type="text" class="mdui-textfield-input" name="phone" value="" id="phone">
+            </div> 
+           <p style="text-align: center"><input type="submit" class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="add()" value="添加"></p>
+        </form>
+    </div>
+    
+</body>
+</html>
