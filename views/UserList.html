@@ -18,7 +18,7 @@
     <div class="mdui-container mdui-m-t-3">
         <div class="mdui-table-fluid">
             <table class="mdui-table mdui-table-hoverable">
-                <tr>
+                <tr style="margin-left: 25%">
                     <th>用户名</th>
                     <th>邮箱</th>
                     <th>电话</th>
@@ -33,7 +33,7 @@
                             <div class="mdui-typo">
                                 <a href="/users/detail/<%= user[i]._id %>"> 查看 </a>
                                 <a href="/users/edit/<%= user[i]._id %>"> 编辑 </a>
-                                <a href="#" class="del" data-id="<%= user[i]._id %>"> 删除 </a>
+                                <a href="/users/list" class="del" data-id="<%= user[i]._id %>"> 删除 </a>
                             </div>
                         </td>
                     </tr>

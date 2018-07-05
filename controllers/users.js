@@ -110,15 +110,19 @@ router.post('/update', function (req, res, next) {
     data.username = req.body.username;
     data.email = req.body.email;
     data.phone = req.body.phone;
+    data.save(function(err) {
+      res.redirect('/users/list')
+    })
     // 更新的数据之后不能为空
-    if(data.username == "" || data.email == "" || data.phone) {
-      // res.json({msg:'更新之后的数据不能为空'})
-      return;
-    }else{
-      data.save(function(err) {
-        res.redirect('/users/list')
-      })
-    }
+    // if(data.username == "" || data.email == "" || data.phone) {
+    //   // res.json({msg:'更新之后的数据不能为空'})
+    //   return;
+    // }else{
+    //   data.save(function(err) {
+    //     res.redirect('/users/list')
+    //   })
+    // }
+    
     
   })
 });

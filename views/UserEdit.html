@@ -9,16 +9,16 @@
     <script src="/javascripts/jquery-2.1.1.min.js"></script>
     <script src="/javascripts/bootstrap.min.js"></script>
     <script>
-       const username = $('#username')
-       const email = $('#email')
-       const phone = $('#phone')
-       if(username == "" || email == "" || phone == "") {
-           alert("更新之后的数据不能为空")
-       }else{
-           alert("更新成功")
-       }
+    //    const username = $('#username')
+    //    const email = $('#email')
+    //    const phone = $('#phone')
+    //    if(username == "" || email == "" || phone == "") {
+    //        alert("更新之后的数据不能为空")
+    //    }else{
+    //        alert("更新成功")
+    //    }
 
-    </script>
+    // </script>
 </head>
 <body class="mdui-theme-primary-teal mdui-theme-accent-blue">
     <div class="mdui-appbar">
@@ -43,7 +43,9 @@
                 <label class="mdui-textfield-label">phone</label>
                 <input type="text" name="phone" class="mdui-textfield-input" id="phone" value="<%= user.phone %>">
             </div>
-         <p style="text-align: center"><input type="submit"  onclick="update()" class="mdui-btn mdui-color-theme-accent mdui-ripple" value="更新"></p>
+            <p style="text-align: center"><button type="submit" class="mdui-btn mdui-color-theme-accent mdui-ripple">更新</button> </p>
+         <!-- <p style="text-align: center"><input type="submit"  onclick="update()" class="mdui-btn mdui-color-theme-accent mdui-ripple" value="更新"></p> -->
+         <!-- <p style="text-align: center"><input type="submit" class="mdui-btn mdui-color-theme-accent mdui-ripple" value="更新"></p> -->
         </form>
     </div>
 </body>
